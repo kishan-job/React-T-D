@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Statement Management</title>
+    <style>
+        body { background-color: #121212 !important; }
+        .table-dark { --bs-table-bg: #1e1e1e; }
+        .btn-link { text-decoration: none; }
+    </style>
+</head>
+<body class="bg-dark text-light p-4">
+    <div class="container-fluid">
+        <h3>Statement Page</h3>
+        <hr class="border-secondary">
+        
+        <table class="table table-dark table-hover border-secondary mt-4">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>DateOfTransaction</th>
+                    <th>Header</th>
+                    <th>Credit</th>
+                    <th>Debit</th>
+                    <th>Action</th>
+                </tr>
+                <tr class="table-active">
+                    <td></td>
+                    <td><input type="date" id="inDate" class="form-control form-control-sm bg-secondary text-white border-0"></td>
+                    <td><input type="text" id="inHeader" class="form-control form-control-sm bg-secondary text-white border-0"></td>
+                    <td><input type="number" id="inCredit" class="form-control form-control-sm bg-secondary text-white border-0"></td>
+                    <td><input type="number" id="inDebit" class="form-control form-control-sm bg-secondary text-white border-0"></td>
+                    <td><button class="btn btn-sm btn-info w-100" onclick="addEntry()">(ADD)</button></td>
+                </tr>
+            </thead>
+            <tbody id="stmtBody"></tbody>
+            <tfoot>
+                <tr class="fw-bold border-top border-secondary">
+                    <td colspan="3" class="text-end">Totals</td>
+                    <td id="totalCredit">0</td>
+                    <td id="totalDebit">0</td>
+                    <td></td>
+                </tr>
+                <tr class="fw-bold text-info">
+                    <td colspan="3" class="text-end">Balance</td>
+                    <td colspan="2" id="netBalance">0</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="../lib/script.js"></script>
+</body>
+</html>

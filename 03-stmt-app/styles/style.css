@@ -1,0 +1,4 @@
+body { background-color: #121212 !important; }
+.table-dark { --bs-table-bg: #1e1e1e; --bs-table-border-color: #333; }
+input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1); cursor: pointer; }
+.btn-link { text-decoration: none; }
